@@ -1,0 +1,4 @@
+This is your house. Do you want to enter?
+- Yes
+	[signal arg="next_level"]
+- No
