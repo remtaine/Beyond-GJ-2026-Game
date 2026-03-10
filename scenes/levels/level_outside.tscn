@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://bv8p0ra0i2iin"]
 
 [ext_resource type="Script" uid="uid://bufhnutu0fcsj" path="res://scenes/environment/day_cycle_sprites.gd" id="1_6hx8f"]
-[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/house.tscn" id="1_qhgnm"]
+[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_qhgnm"]
 [ext_resource type="Texture2D" uid="uid://cs37kwvwq3mq5" path="res://images/map/exterior_map_day_bg.png" id="1_sa21k"]
 [ext_resource type="PackedScene" uid="uid://cqqchrftn6rp" path="res://scenes/environment/flower_shop.tscn" id="1_ycyr0"]
 [ext_resource type="Texture2D" uid="uid://dw25cc3wpqay8" path="res://images/map/exterior_map_night_bg.png" id="2_h0iu1"]
 [ext_resource type="Texture2D" uid="uid://di81no6ihcc13" path="res://images/map/exterior_map_day.png" id="3_bkdnu"]
 [ext_resource type="Texture2D" uid="uid://cohnv21knlox2" path="res://images/map/exterior_map_night.png" id="3_ie6rd"]
+[ext_resource type="PackedScene" uid="uid://dbjlqht0afd3u" path="res://scenes/environment/bar.tscn" id="5_htrpc"]
 [ext_resource type="PackedScene" uid="uid://bjvd1aygpduxa" path="res://scenes/characters/player.tscn" id="6_75lfy"]
+[ext_resource type="PackedScene" uid="uid://b7k7ka4dwerp7" path="res://scenes/environment/cafe.tscn" id="6_p6xc1"]
+[ext_resource type="PackedScene" uid="uid://bx08krfjtox0t" path="res://scenes/environment/restaurant.tscn" id="6_w46pw"]
+[ext_resource type="PackedScene" uid="uid://cvbsavf5kb3pf" path="res://scenes/environment/groceries.tscn" id="7_arku5"]
+[ext_resource type="PackedScene" uid="uid://ddlwj4yfegjpk" path="res://scenes/environment/night_market.tscn" id="8_hrheo"]
+[ext_resource type="PackedScene" uid="uid://b37hl6kpxov80" path="res://scenes/ui/ui_layer_outside.tscn" id="14_en1ys"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o5qli"]
 
@@ -64,22 +70,23 @@ shape = SubResource("RectangleShape2D_0wfyh")
 [node name="FlowerShop" parent="Environment" unique_id=446300562 instance=ExtResource("1_ycyr0")]
 position = Vector2(170.99998, 869.99994)
 
-[node name="House1" parent="Environment" unique_id=1071866450 groups=["enterable"] instance=ExtResource("1_qhgnm")]
+[node name="Bar" parent="Environment" unique_id=1304287665 instance=ExtResource("5_htrpc")]
+position = Vector2(632.99994, 876.99994)
+
+[node name="Cafe" parent="Environment" unique_id=125649470 instance=ExtResource("6_p6xc1")]
+position = Vector2(1097.9999, 868.99994)
+
+[node name="House" parent="Environment" unique_id=1071866450 groups=["enterable"] instance=ExtResource("1_qhgnm")]
 position = Vector2(1566.0001, 878)
 
-[node name="House3" type="ColorRect" parent="Environment" unique_id=566230475]
-offset_left = 489.0
-offset_top = 732.0
-offset_right = 784.0
-offset_bottom = 1017.0
-color = Color(0.827451, 0.7411765, 0.99607843, 1)
+[node name="Restaurant" parent="Environment" unique_id=397722449 instance=ExtResource("6_w46pw")]
+position = Vector2(2097.0002, 877)
 
-[node name="House4" type="ColorRect" parent="Environment" unique_id=2068597686]
-offset_left = 957.0
-offset_top = 732.0
-offset_right = 1252.0
-offset_bottom = 1017.0
-color = Color(0.827451, 0.7411765, 0.99607843, 1)
+[node name="Groceries" parent="Environment" unique_id=469484435 instance=ExtResource("7_arku5")]
+position = Vector2(2563.9998, 882.99994)
+
+[node name="NightMarket" parent="Environment" unique_id=429883883 instance=ExtResource("8_hrheo")]
+position = Vector2(3057.9998, 872.99994)
 
 [node name="Tree1" type="ColorRect" parent="Environment" unique_id=1811105207]
 offset_left = 362.0
@@ -102,12 +109,12 @@ offset_right = 1392.0
 offset_bottom = 983.0
 color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
 
-[node name="House5" type="ColorRect" parent="Environment" unique_id=779624328]
-offset_left = 1939.0
-offset_top = 732.0
-offset_right = 2234.0
-offset_bottom = 1017.0
-color = Color(0.827451, 0.7411765, 0.99607843, 1)
+[node name="Tree4" type="ColorRect" parent="Environment" unique_id=481656699]
+offset_left = 1766.0
+offset_top = 698.0
+offset_right = 1872.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
 
 [node name="Tree5" type="ColorRect" parent="Environment" unique_id=1076670622]
 offset_left = 2268.0
@@ -116,13 +123,6 @@ offset_right = 2374.0
 offset_bottom = 983.0
 color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
 
-[node name="House6" type="ColorRect" parent="Environment" unique_id=1402298455]
-offset_left = 2423.0
-offset_top = 732.0
-offset_right = 2718.0
-offset_bottom = 1017.0
-color = Color(0.827451, 0.7411765, 0.99607843, 1)
-
 [node name="Tree6" type="ColorRect" parent="Environment" unique_id=1913714011]
 offset_left = 2752.0
 offset_top = 698.0
@@ -130,24 +130,10 @@ offset_right = 2858.0
 offset_bottom = 983.0
 color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
 
-[node name="House7" type="ColorRect" parent="Environment" unique_id=63150090]
-offset_left = 2905.0
-offset_top = 732.0
-offset_right = 3200.0
-offset_bottom = 1017.0
-color = Color(0.827451, 0.7411765, 0.99607843, 1)
-
 [node name="Tree7" type="ColorRect" parent="Environment" unique_id=1881953275]
 offset_left = 3234.0
 offset_top = 698.0
 offset_right = 3340.0
-offset_bottom = 983.0
-color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
-
-[node name="Tree4" type="ColorRect" parent="Environment" unique_id=481656699]
-offset_left = 1766.0
-offset_top = 698.0
-offset_right = 1872.0
 offset_bottom = 983.0
 color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
 
@@ -163,3 +149,5 @@ texture = ExtResource("3_bkdnu")
 [node name="ExteriorMapNight" type="Sprite2D" parent="." unique_id=602699592]
 position = Vector2(2499, 3001)
 texture = ExtResource("3_ie6rd")
+
+[node name="UILayer" parent="." unique_id=1540580630 instance=ExtResource("14_en1ys")]
