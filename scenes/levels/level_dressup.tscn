@@ -1,0 +1,383 @@
+[gd_scene format=3 uid="uid://8ojv5oj6xwgi"]
+
+[ext_resource type="Texture2D" uid="uid://bloux03xhrh04" path="res://images/dressup/template/tint5_head.png" id="1_2qd31"]
+[ext_resource type="Script" uid="uid://damm4rmkq4jr1" path="res://scenes/levels/level_dressup.gd" id="1_vmpqy"]
+[ext_resource type="Texture2D" uid="uid://blb0pj6uviypo" path="res://images/dressup/template/whiteShirt1.png" id="2_tmfqq"]
+[ext_resource type="Texture2D" uid="uid://b4ssxgqvpwkhn" path="res://images/dressup/template/tint5_neck.png" id="3_vsf71"]
+[ext_resource type="Texture2D" uid="uid://5iaeuxqc1wd3" path="res://images/dressup/template/tint5_arm.png" id="4_m805j"]
+[ext_resource type="Texture2D" uid="uid://cine1q8b3bwfo" path="res://images/dressup/template/pantsBlue21.png" id="5_3ohqx"]
+[ext_resource type="Texture2D" uid="uid://c1jkq0bhxgs5e" path="res://images/dressup/template/tint5_leg.png" id="6_6ujho"]
+[ext_resource type="Texture2D" uid="uid://bpgfkejeu56c4" path="res://images/dressup/template/pantsBlue2_long.png" id="6_c4wa2"]
+[ext_resource type="Texture2D" uid="uid://d22v7n7wcux8u" path="res://images/dressup/template/blackShoe1.png" id="7_vsf71"]
+[ext_resource type="Texture2D" uid="uid://d3oe16esccmig" path="res://images/dressup/template/face1.png" id="8_m805j"]
+[ext_resource type="Texture2D" uid="uid://8ecop8dn6mc4" path="res://images/dressup/hair/blackWoman1.png" id="10_2isr4"]
+[ext_resource type="PackedScene" uid="uid://bbx0o7c8bme7r" path="res://scenes/clothes/clothing.tscn" id="10_6ujho"]
+[ext_resource type="Texture2D" uid="uid://7uhrdcxeegpx" path="res://images/dressup/hair/blondeWoman2.png" id="11_vmpqy"]
+[ext_resource type="Texture2D" uid="uid://tvk1rh2lkq08" path="res://images/dressup/hair/brown1Woman3.png" id="12_4vdyx"]
+[ext_resource type="Texture2D" uid="uid://dokxfkn2gim2q" path="res://images/dressup/hair/brown2Man5.png" id="13_s3nhc"]
+[ext_resource type="Texture2D" uid="uid://btq51q4or3m7f" path="res://images/dressup/hair/greyMan1.png" id="14_c3hvs"]
+[ext_resource type="Texture2D" uid="uid://dbqstf7v570sm" path="res://images/dressup/hair/redWoman5.png" id="15_3mdbu"]
+[ext_resource type="Texture2D" uid="uid://brrb406f5r01a" path="res://images/dressup/hair/tanWoman6.png" id="16_nyb1t"]
+[ext_resource type="Texture2D" uid="uid://cyrn1i1gplkm5" path="res://images/dressup/hair/whiteWoman4.png" id="17_lt3cj"]
+
+[node name="LevelDressup" type="Node" unique_id=116201570]
+script = ExtResource("1_vmpqy")
+
+[node name="BG" type="ColorRect" parent="." unique_id=568064450]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.504644, 0.33477455, 0.55854446, 1)
+
+[node name="PersonTemplate" type="Control" parent="." unique_id=1564681789]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 135.0
+offset_top = 67.0
+offset_right = 677.0
+offset_bottom = 972.0
+
+[node name="Shadow" type="Sprite2D" parent="PersonTemplate" unique_id=1823919192]
+self_modulate = Color(1, 1, 1, 0.3019608)
+position = Vector2(275.00003, 721.00006)
+scale = Vector2(4.1648946, 3.3214285)
+texture = ExtResource("7_vsf71")
+
+[node name="Tint5Neck" type="Sprite2D" parent="PersonTemplate" unique_id=150037032]
+position = Vector2(270, 362)
+texture = ExtResource("3_vsf71")
+
+[node name="Tint5Head" type="Sprite2D" parent="PersonTemplate" unique_id=1506316067]
+position = Vector2(265.5, 271)
+texture = ExtResource("1_2qd31")
+
+[node name="Face1" type="Sprite2D" parent="PersonTemplate" unique_id=1385555544]
+position = Vector2(270.5, 281)
+texture = ExtResource("8_m805j")
+
+[node name="Tint5Arm" type="Sprite2D" parent="PersonTemplate" unique_id=324308453]
+position = Vector2(405, 427)
+texture = ExtResource("4_m805j")
+
+[node name="Tint5Arm2" type="Sprite2D" parent="PersonTemplate" unique_id=206956822]
+position = Vector2(132, 431)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("4_m805j")
+
+[node name="WhiteShirt1" type="Sprite2D" parent="PersonTemplate" unique_id=791664310]
+position = Vector2(270, 437)
+texture = ExtResource("2_tmfqq")
+
+[node name="Tint5Leg" type="Sprite2D" parent="PersonTemplate" unique_id=315695550]
+position = Vector2(332, 623)
+texture = ExtResource("6_6ujho")
+
+[node name="Tint5Leg2" type="Sprite2D" parent="PersonTemplate" unique_id=126499503]
+position = Vector2(211, 624)
+scale = Vector2(-1, 1)
+texture = ExtResource("6_6ujho")
+
+[node name="PantsBlue21" type="Sprite2D" parent="PersonTemplate" unique_id=1539178541]
+position = Vector2(271, 542)
+texture = ExtResource("5_3ohqx")
+
+[node name="PantsBlue2Long" type="Sprite2D" parent="PersonTemplate" unique_id=976379147]
+visible = false
+position = Vector2(325, 619)
+texture = ExtResource("6_c4wa2")
+
+[node name="PantsBlue2Long2" type="Sprite2D" parent="PersonTemplate" unique_id=1646745316]
+visible = false
+position = Vector2(218, 619)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("6_c4wa2")
+
+[node name="BlackShoe1" type="Sprite2D" parent="PersonTemplate" unique_id=619619625]
+position = Vector2(358, 713)
+texture = ExtResource("7_vsf71")
+
+[node name="BlackShoe2" type="Sprite2D" parent="PersonTemplate" unique_id=1393497459]
+position = Vector2(180, 711)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("7_vsf71")
+
+[node name="ClothingBody" type="Control" parent="." unique_id=980829583]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 148.0
+offset_top = 212.0
+offset_right = 652.0
+offset_bottom = 881.0
+
+[node name="WigsHolder" type="Control" parent="ClothingBody" unique_id=997580883]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Wig1" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=1811816024]
+visible = false
+layout_mode = 0
+offset_left = 172.0
+offset_top = 26.0
+offset_right = 337.0
+offset_bottom = 253.0
+texture = ExtResource("10_2isr4")
+
+[node name="Wig2" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=919812691]
+visible = false
+layout_mode = 0
+offset_left = 172.0
+offset_top = 26.0
+offset_right = 337.0
+offset_bottom = 253.0
+texture = ExtResource("11_vmpqy")
+
+[node name="Wig3" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=1456357520]
+visible = false
+layout_mode = 0
+offset_left = 172.0
+offset_top = 26.0
+offset_right = 337.0
+offset_bottom = 253.0
+texture = ExtResource("12_4vdyx")
+
+[node name="Wig4" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=504497025]
+visible = false
+layout_mode = 0
+offset_left = 172.0
+offset_top = -25.0
+offset_right = 343.0
+offset_bottom = 202.0
+texture = ExtResource("13_s3nhc")
+
+[node name="Wig5" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=1663698358]
+visible = false
+layout_mode = 0
+offset_left = 171.0
+offset_top = 4.0
+offset_right = 336.0
+offset_bottom = 231.0
+texture = ExtResource("14_c3hvs")
+
+[node name="Wig6" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=737076385]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 26.0
+offset_right = 337.0
+offset_bottom = 253.0
+texture = ExtResource("15_3mdbu")
+
+[node name="Wig7" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=1150947481]
+visible = false
+layout_mode = 0
+offset_left = 172.0
+offset_top = 26.0
+offset_right = 337.0
+offset_bottom = 253.0
+texture = ExtResource("16_nyb1t")
+
+[node name="Wig8" type="TextureRect" parent="ClothingBody/WigsHolder" unique_id=1360400608]
+visible = false
+layout_mode = 0
+offset_left = 172.0
+offset_top = 26.0
+offset_right = 337.0
+offset_bottom = 253.0
+texture = ExtResource("17_lt3cj")
+
+[node name="Cabinet" type="Control" parent="." unique_id=1093124524]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 754.0
+offset_top = 14.0
+offset_right = 1873.0
+offset_bottom = 1062.0
+
+[node name="BG" type="ColorRect" parent="Cabinet" unique_id=687665102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.40912575, 0.26207596, 0.12567177, 1)
+
+[node name="CabinetMargin" type="MarginContainer" parent="Cabinet" unique_id=1769301611]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Shelves" type="VBoxContainer" parent="Cabinet/CabinetMargin" unique_id=2040245733]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Wigs" type="Control" parent="Cabinet/CabinetMargin/Shelves" unique_id=1350697375]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BG" type="ColorRect" parent="Cabinet/CabinetMargin/Shelves/Wigs" unique_id=917086278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.09867389, 0.038269818, 0, 1)
+
+[node name="Carousel" type="ScrollContainer" parent="Cabinet/CabinetMargin/Shelves/Wigs" unique_id=952015914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Separator" type="HBoxContainer" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel" unique_id=558190058]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Wig1" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=845825828 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 3
+
+[node name="Wig2" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=298894401 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_vmpqy")
+expand_mode = 3
+
+[node name="Wig3" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=1930000424 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_4vdyx")
+expand_mode = 3
+
+[node name="Wig4" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=1708086505 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("13_s3nhc")
+expand_mode = 3
+
+[node name="Wig5" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=337025733 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("14_c3hvs")
+expand_mode = 3
+
+[node name="Wig6" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=1232914289 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("15_3mdbu")
+expand_mode = 3
+
+[node name="Wig7" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=519793384 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("16_nyb1t")
+expand_mode = 3
+
+[node name="Wig8" parent="Cabinet/CabinetMargin/Shelves/Wigs/Carousel/Separator" unique_id=189496873 instance=ExtResource("10_6ujho")]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_lt3cj")
+expand_mode = 3
+
+[node name="Tops" type="Control" parent="Cabinet/CabinetMargin/Shelves" unique_id=511465981]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BG" type="ColorRect" parent="Cabinet/CabinetMargin/Shelves/Tops" unique_id=2097946129]
+layout_mode = 0
+offset_right = 1079.0
+offset_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.24322435, 0.24322438, 0.24322438, 1)
+
+[node name="Carousel" type="HBoxContainer" parent="Cabinet/CabinetMargin/Shelves/Tops" unique_id=217310560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pants" type="Control" parent="Cabinet/CabinetMargin/Shelves" unique_id=742417260]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BG" type="ColorRect" parent="Cabinet/CabinetMargin/Shelves/Pants" unique_id=191251932]
+layout_mode = 0
+offset_right = 1079.0
+offset_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.24322435, 0.24322438, 0.24322438, 1)
+
+[node name="Carousel" type="HBoxContainer" parent="Cabinet/CabinetMargin/Shelves/Pants" unique_id=302869417]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shoes" type="Control" parent="Cabinet/CabinetMargin/Shelves" unique_id=957502846]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BG" type="ColorRect" parent="Cabinet/CabinetMargin/Shelves/Shoes" unique_id=1803677235]
+layout_mode = 0
+offset_right = 1079.0
+offset_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.24322435, 0.24322438, 0.24322438, 1)
+
+[node name="Carousel" type="HBoxContainer" parent="Cabinet/CabinetMargin/Shelves/Shoes" unique_id=545062917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Accessories" type="Control" parent="Cabinet/CabinetMargin/Shelves" unique_id=985897368]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BG" type="ColorRect" parent="Cabinet/CabinetMargin/Shelves/Accessories" unique_id=1246995191]
+layout_mode = 0
+offset_right = 1079.0
+offset_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.24322435, 0.24322438, 0.24322438, 1)
+
+[node name="Carousel" type="HBoxContainer" parent="Cabinet/CabinetMargin/Shelves/Accessories" unique_id=209002513]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

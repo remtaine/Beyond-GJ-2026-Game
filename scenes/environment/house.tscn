@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dh37rgvpnaty0"]
+
+[ext_resource type="Script" uid="uid://77xif6ltk2m3" path="res://scenes/environment/building.gd" id="1_rqqr8"]
+[ext_resource type="PackedScene" uid="uid://8ojv5oj6xwgi" path="res://scenes/levels/level_dressup.tscn" id="2_e5the"]
+[ext_resource type="Texture2D" uid="uid://cne03ykxjsxny" path="res://images/map/exterior_house_day.png" id="3_e5the"]
+[ext_resource type="Texture2D" uid="uid://7glgiqtxnohh" path="res://images/map/exterior_house_night.png" id="4_o0wfr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
+size = Vector2(137.92065, 135.9202)
+
+[node name="House" type="Area2D" unique_id=446300562]
+scale = Vector2(2.0664063, 1.9570314)
+script = ExtResource("1_rqqr8")
+next_level = ExtResource("2_e5the")
+entry_dialogue = "house_enter"
+
+[node name="Sprites" type="Node2D" parent="." unique_id=1900571917]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Day" type="Sprite2D" parent="Sprites" unique_id=1663011849]
+position = Vector2(1.1124822, 2.3324566)
+scale = Vector2(0.044425327, 0.044425324)
+texture = ExtResource("3_e5the")
+
+[node name="Night" type="Sprite2D" parent="Sprites" unique_id=1268325823]
+visible = false
+position = Vector2(1.1124822, 2.3324566)
+scale = Vector2(0.044425327, 0.044425324)
+texture = ExtResource("4_o0wfr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=838419211]
+position = Vector2(0.7258979, 0.510977)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_sugp2")
+debug_color = Color(0.58519536, 0.38212454, 0.9961789, 0.41960785)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1949411652]
+visible = false
+offset_left = -170.82797
+offset_top = -159.93613
+offset_right = 183.17203
+offset_bottom = -71.94211
+text = "My House"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

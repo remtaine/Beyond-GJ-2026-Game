@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bbx0o7c8bme7r"]
+
+[ext_resource type="Texture2D" uid="uid://8ecop8dn6mc4" path="res://images/dressup/hair/blackWoman1.png" id="1_28xuc"]
+[ext_resource type="Script" uid="uid://dm1ncbbie8fpy" path="res://scenes/clothes/clothing.gd" id="2_5sh0s"]
+
+[node name="Clothing" type="TextureRect" unique_id=845825828]
+texture = ExtResource("1_28xuc")
+script = ExtResource("2_5sh0s")
+
+[node name="Button" type="Button" parent="." unique_id=749407221]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

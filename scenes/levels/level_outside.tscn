@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://bv8p0ra0i2iin"]
+
+[ext_resource type="Script" uid="uid://bufhnutu0fcsj" path="res://scenes/environment/day_cycle_sprites.gd" id="1_6hx8f"]
+[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/house.tscn" id="1_qhgnm"]
+[ext_resource type="Texture2D" uid="uid://cs37kwvwq3mq5" path="res://images/map/exterior_map_day_bg.png" id="1_sa21k"]
+[ext_resource type="PackedScene" uid="uid://cqqchrftn6rp" path="res://scenes/environment/flower_shop.tscn" id="1_ycyr0"]
+[ext_resource type="Texture2D" uid="uid://dw25cc3wpqay8" path="res://images/map/exterior_map_night_bg.png" id="2_h0iu1"]
+[ext_resource type="Texture2D" uid="uid://di81no6ihcc13" path="res://images/map/exterior_map_day.png" id="3_bkdnu"]
+[ext_resource type="Texture2D" uid="uid://cohnv21knlox2" path="res://images/map/exterior_map_night.png" id="3_ie6rd"]
+[ext_resource type="PackedScene" uid="uid://bjvd1aygpduxa" path="res://scenes/characters/player.tscn" id="6_75lfy"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o5qli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(3587, 83)
+
+[node name="LevelOutside" type="Node" unique_id=1968536122]
+
+[node name="Background" type="Node" parent="." unique_id=1470569794]
+
+[node name="Sprites" type="Control" parent="Background" unique_id=724627452 groups=["day_cycle"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1597.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6hx8f")
+
+[node name="Day" type="NinePatchRect" parent="Background/Sprites" unique_id=207589953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1586.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sa21k")
+patch_margin_bottom = 100
+
+[node name="Night" type="NinePatchRect" parent="Background/Sprites" unique_id=571119350]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1586.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h0iu1")
+patch_margin_bottom = 100
+
+[node name="Foreground" type="StaticBody2D" parent="." unique_id=1431435780]
+position = Vector2(1920, 1000)
+physics_material_override = SubResource("PhysicsMaterial_o5qli")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground" unique_id=180870209]
+position = Vector2(-214.5, 75.5)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Environment" type="Node" parent="." unique_id=760563525]
+
+[node name="FlowerShop" parent="Environment" unique_id=446300562 instance=ExtResource("1_ycyr0")]
+position = Vector2(170.99998, 869.99994)
+
+[node name="House1" parent="Environment" unique_id=1071866450 groups=["enterable"] instance=ExtResource("1_qhgnm")]
+position = Vector2(1566.0001, 878)
+
+[node name="House3" type="ColorRect" parent="Environment" unique_id=566230475]
+offset_left = 489.0
+offset_top = 732.0
+offset_right = 784.0
+offset_bottom = 1017.0
+color = Color(0.827451, 0.7411765, 0.99607843, 1)
+
+[node name="House4" type="ColorRect" parent="Environment" unique_id=2068597686]
+offset_left = 957.0
+offset_top = 732.0
+offset_right = 1252.0
+offset_bottom = 1017.0
+color = Color(0.827451, 0.7411765, 0.99607843, 1)
+
+[node name="Tree1" type="ColorRect" parent="Environment" unique_id=1811105207]
+offset_left = 362.0
+offset_top = 698.0
+offset_right = 468.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="Tree2" type="ColorRect" parent="Environment" unique_id=1271824771]
+offset_left = 831.0
+offset_top = 698.0
+offset_right = 937.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="Tree3" type="ColorRect" parent="Environment" unique_id=1098176723]
+offset_left = 1286.0
+offset_top = 698.0
+offset_right = 1392.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="House5" type="ColorRect" parent="Environment" unique_id=779624328]
+offset_left = 1939.0
+offset_top = 732.0
+offset_right = 2234.0
+offset_bottom = 1017.0
+color = Color(0.827451, 0.7411765, 0.99607843, 1)
+
+[node name="Tree5" type="ColorRect" parent="Environment" unique_id=1076670622]
+offset_left = 2268.0
+offset_top = 698.0
+offset_right = 2374.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="House6" type="ColorRect" parent="Environment" unique_id=1402298455]
+offset_left = 2423.0
+offset_top = 732.0
+offset_right = 2718.0
+offset_bottom = 1017.0
+color = Color(0.827451, 0.7411765, 0.99607843, 1)
+
+[node name="Tree6" type="ColorRect" parent="Environment" unique_id=1913714011]
+offset_left = 2752.0
+offset_top = 698.0
+offset_right = 2858.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="House7" type="ColorRect" parent="Environment" unique_id=63150090]
+offset_left = 2905.0
+offset_top = 732.0
+offset_right = 3200.0
+offset_bottom = 1017.0
+color = Color(0.827451, 0.7411765, 0.99607843, 1)
+
+[node name="Tree7" type="ColorRect" parent="Environment" unique_id=1881953275]
+offset_left = 3234.0
+offset_top = 698.0
+offset_right = 3340.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="Tree4" type="ColorRect" parent="Environment" unique_id=481656699]
+offset_left = 1766.0
+offset_top = 698.0
+offset_right = 1872.0
+offset_bottom = 983.0
+color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
+
+[node name="Characters" type="Node" parent="." unique_id=1341144710]
+
+[node name="Player" parent="Characters" unique_id=605741468 instance=ExtResource("6_75lfy")]
+position = Vector2(1345, 935)
+
+[node name="ExteriorMapDay" type="Sprite2D" parent="." unique_id=1953325739]
+position = Vector2(2527, 1901)
+texture = ExtResource("3_bkdnu")
+
+[node name="ExteriorMapNight" type="Sprite2D" parent="." unique_id=602699592]
+position = Vector2(2499, 3001)
+texture = ExtResource("3_ie6rd")

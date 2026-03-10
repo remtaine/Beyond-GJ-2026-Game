@@ -1,7 +1,5 @@
-extends Button
+extends Node
 
-#@onready var night_filter: ColorRect = $NightFilter
-signal change_day_and_night
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +10,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_pressed() -> void:
-	print("change day/night")
-	change_day_and_night.emit()
-	get_tree().call_group("day_cycle", "swap_cycle")
+func swap_cycle() -> void:
+	if get_child_count() != 2:
+		pass
+	else:
+		$Day.visible = not $Day.visible
+		$Night.visible = not $Night.visible
+		print("day is now ", $Day.visible)
+		print("night is now ", $Night.visible)

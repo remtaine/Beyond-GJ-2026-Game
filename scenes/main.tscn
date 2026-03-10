@@ -1,222 +1,28 @@
-[gd_scene load_steps=11 format=3 uid="uid://clvw2uyphr3ib"]
+[gd_scene format=3 uid="uid://clvw2uyphr3ib"]
 
-[ext_resource type="Script" uid="uid://3a85j6vitr5h" path="res://scenes/characters/player.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bv8p0ra0i2iin" path="res://scenes/levels/level_outside.tscn" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://3xaigdvi2xle" path="res://icon.svg" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dogb8ao1rifbo" path="res://scenes/main.gd" id="1_tbgi4"]
 [ext_resource type="Script" uid="uid://c2pe5jh4s4mmd" path="res://scenes/ui/day_night_button.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://1qa7rlfqwpes" path="res://scenes/ui/phone.gd" id="3_sugp2"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o5qli"]
+[node name="Main" type="Node" unique_id=1759323836]
+script = ExtResource("1_tbgi4")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
-size = Vector2(2088, 83)
+[node name="LevelOutside" parent="." unique_id=1968536122 instance=ExtResource("1_jyhfs")]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
-size = Vector2(274.5, 305)
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1299301904]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
-size = Vector2(117, 305)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
-size = Vector2(137, 134)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0wfyh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_o5qli")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
-
-[node name="Main" type="Node"]
-
-[node name="LevelOutside" type="Node" parent="."]
-
-[node name="Background" type="Node" parent="LevelOutside"]
-
-[node name="BG" type="ColorRect" parent="LevelOutside/Background"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Foreground" type="StaticBody2D" parent="LevelOutside/Background"]
-position = Vector2(1920, 1000)
-physics_material_override = SubResource("PhysicsMaterial_o5qli")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Background/Foreground"]
-position = Vector2(-964, 75.5)
-shape = SubResource("RectangleShape2D_0wfyh")
-
-[node name="Environment" type="Node" parent="LevelOutside"]
-
-[node name="House1" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(-732, 23)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/House1"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 1039.0
-offset_bottom = 936.0
-color = Color(0.57304883, 0.00023834348, 0.5730448, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/House1"]
-position = Vector2(908.25, 789.5)
-shape = SubResource("RectangleShape2D_sugp2")
-debug_color = Color(0.58519536, 0.38212454, 0.9961789, 0.41960785)
-
-[node name="House2" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(-260, 25)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/House2"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 1039.0
-offset_bottom = 936.0
-color = Color(0.57304883, 0.00023834348, 0.5730448, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/House2"]
-position = Vector2(908.25, 789.5)
-shape = SubResource("RectangleShape2D_sugp2")
-debug_color = Color(0.58519536, 0.38212454, 0.9961789, 0.41960785)
-
-[node name="House3" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(215, 24)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/House3"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 1039.0
-offset_bottom = 936.0
-color = Color(0.57304883, 0.00023834348, 0.5730448, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/House3"]
-position = Vector2(908.25, 789.5)
-shape = SubResource("RectangleShape2D_sugp2")
-debug_color = Color(0.58519536, 0.38212454, 0.9961789, 0.41960785)
-
-[node name="House4" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(665, 31)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/House4"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 1039.0
-offset_bottom = 936.0
-color = Color(0.57304883, 0.00023834348, 0.5730448, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/House4"]
-position = Vector2(908.25, 789.5)
-shape = SubResource("RectangleShape2D_sugp2")
-debug_color = Color(0.58519536, 0.38212454, 0.9961789, 0.41960785)
-
-[node name="Tree1" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(-414, 47)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/Tree1"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 882.0
-offset_bottom = 936.0
-color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/Tree1"]
-position = Vector2(829.5, 789.5)
-shape = SubResource("RectangleShape2D_jyhfs")
-debug_color = Color(0, 0.60556024, 0.66056156, 0.41960785)
-
-[node name="Tree2" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(47, 55)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/Tree2"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 882.0
-offset_bottom = 936.0
-color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/Tree2"]
-position = Vector2(829.5, 789.5)
-shape = SubResource("RectangleShape2D_jyhfs")
-debug_color = Color(0, 0.60556024, 0.66056156, 0.41960785)
-
-[node name="Tree3" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(519, 69)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/Tree3"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 882.0
-offset_bottom = 936.0
-color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/Tree3"]
-position = Vector2(829.5, 789.5)
-shape = SubResource("RectangleShape2D_jyhfs")
-debug_color = Color(0, 0.60556024, 0.66056156, 0.41960785)
-
-[node name="Tree4" type="Area2D" parent="LevelOutside/Environment"]
-position = Vector2(988, 70)
-
-[node name="ColorRect" type="ColorRect" parent="LevelOutside/Environment/Tree4"]
-offset_left = 776.0
-offset_top = 651.0
-offset_right = 882.0
-offset_bottom = 936.0
-color = Color(6.160736e-06, 0.90437245, 0.8560028, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Environment/Tree4"]
-position = Vector2(829.5, 789.5)
-shape = SubResource("RectangleShape2D_jyhfs")
-debug_color = Color(0, 0.60556024, 0.66056156, 0.41960785)
-
-[node name="Characters" type="Node" parent="LevelOutside"]
-
-[node name="Player" type="CharacterBody2D" parent="LevelOutside/Characters"]
-z_index = 1
-position = Vector2(630, 964)
-script = ExtResource("1_0wfyh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelOutside/Characters/Player"]
-shape = SubResource("RectangleShape2D_o5qli")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LevelOutside/Characters/Player"]
-sprite_frames = SubResource("SpriteFrames_0wfyh")
-animation = &"idle"
-
-[node name="UILayer" type="CanvasLayer" parent="."]
-
-[node name="DayNightButton" type="Button" parent="UILayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -306.0
-offset_top = 13.0
-offset_right = -170.0
-offset_bottom = 149.0
-grow_horizontal = 0
+[node name="DayNightButton" type="Button" parent="UILayer" unique_id=671310313]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 156.0
+offset_bottom = 156.0
+focus_mode = 0
 icon = ExtResource("1_o5qli")
 script = ExtResource("3_jyhfs")
 
-[node name="NightFilter" type="ColorRect" parent="UILayer/DayNightButton"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1614.0
-offset_top = -13.0
-offset_right = 170.0
-offset_bottom = 931.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-color = Color(0.11764706, 0.23529412, 0.6156863, 0.7137255)
-
-[node name="DayNightLabel" type="RichTextLabel" parent="UILayer/DayNightButton"]
+[node name="DayNightLabel" type="RichTextLabel" parent="UILayer/DayNightButton" unique_id=1966334851]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 141.0
@@ -224,7 +30,7 @@ offset_right = 140.0
 offset_bottom = 180.0
 text = "Day/Night"
 
-[node name="Phone" type="Control" parent="UILayer"]
+[node name="Phone" type="Control" parent="UILayer" unique_id=1414637824]
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -234,7 +40,7 @@ offset_bottom = 40.0
 grow_horizontal = 0
 script = ExtResource("3_sugp2")
 
-[node name="PhoneLabel" type="RichTextLabel" parent="UILayer/Phone"]
+[node name="PhoneLabel" type="RichTextLabel" parent="UILayer/Phone" unique_id=544893839]
 layout_mode = 0
 offset_left = -109.0
 offset_top = 154.0
@@ -243,20 +49,22 @@ offset_bottom = 193.0
 text = "Phone"
 horizontal_alignment = 1
 
-[node name="PhoneAppearButton" type="Button" parent="UILayer/Phone"]
+[node name="PhoneAppearButton" type="Button" parent="UILayer/Phone" unique_id=871543796]
 layout_mode = 0
 offset_left = -111.0
 offset_top = 12.0
 offset_right = 25.0
 offset_bottom = 148.0
+focus_mode = 0
 icon = ExtResource("1_o5qli")
 
-[node name="PhoneList" type="ColorRect" parent="UILayer/Phone"]
+[node name="PhoneList" type="ColorRect" parent="UILayer/Phone" unique_id=393251287]
+visible = false
 layout_mode = 0
-offset_left = 58.0
-offset_top = 206.0
-offset_right = 429.0
-offset_bottom = 646.0
+offset_left = -1291.0
+offset_top = 154.0
+offset_right = -536.0
+offset_bottom = 946.0
 color = Color(0.7336398, 0.6444362, 1.1551381e-06, 1)
 
 [connection signal="pressed" from="UILayer/DayNightButton" to="UILayer/DayNightButton" method="_on_pressed"]

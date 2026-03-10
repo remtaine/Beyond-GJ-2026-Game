@@ -1,7 +1,7 @@
-extends Button
+class_name Clothing
+extends TextureRect
 
-#@onready var night_filter: ColorRect = $NightFilter
-signal change_day_and_night
+signal clothing_selected(clothing_name)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_pressed() -> void:
-	print("change day/night")
-	change_day_and_night.emit()
-	get_tree().call_group("day_cycle", "swap_cycle")
+func _on_button_pressed() -> void:
+	print(name, " is selected")
+	clothing_selected.emit(name)
