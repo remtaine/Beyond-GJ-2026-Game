@@ -16,7 +16,6 @@ func _process(delta: float) -> void:
 
 
 func _on_phone_appear_button_pressed() -> void:
-	print("phone clicked")
 	#if not phone_visible:
 		#phone_list.position.x -= phone_movement
 	#else:
