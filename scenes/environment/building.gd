@@ -6,7 +6,7 @@ extends Area2D
 
 signal change_to_next_level(next_level)
 
-@export var next_level : PackedScene = null
+@export var next_level_str : String = "LEVEL_DRESSUP"
 @export var entry_dialogue : String
 
 # Called when the node enters the scene tree for the first time.
@@ -22,7 +22,13 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	for cycle_sprite in $Sprites.get_children():
+		if cycle_sprite.visible and cycle_sprite.texture == null:
+			return
+
+	#if visible
 	print("entered ", name)
+	Messenger.next_scene_str = next_level_str
 	Dialogic.start(entry_dialogue)
 
 

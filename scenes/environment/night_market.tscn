@@ -6,7 +6,7 @@
 [node name="NightMarket" unique_id=446300562 instance=ExtResource("1_dicwi")]
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
-texture = ExtResource("2_lys3w")
+texture = null
 
 [node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
 texture = ExtResource("2_lys3w")

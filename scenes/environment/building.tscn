@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dh37rgvpnaty0"]
 
 [ext_resource type="Script" uid="uid://77xif6ltk2m3" path="res://scenes/environment/building.gd" id="1_0mpse"]
-[ext_resource type="PackedScene" uid="uid://8ojv5oj6xwgi" path="res://scenes/levels/level_dressup.tscn" id="2_x3g7w"]
 [ext_resource type="Script" uid="uid://bufhnutu0fcsj" path="res://scenes/environment/day_cycle_sprites.gd" id="3_7gcnc"]
 [ext_resource type="Texture2D" uid="uid://cne03ykxjsxny" path="res://images/map/exterior_house_day.png" id="4_26xop"]
 [ext_resource type="Texture2D" uid="uid://7glgiqtxnohh" path="res://images/map/exterior_house_night.png" id="5_7vxnf"]
@@ -12,7 +11,6 @@ size = Vector2(137.92065, 135.9202)
 [node name="Building" type="Area2D" unique_id=446300562]
 scale = Vector2(2.0664063, 1.9570314)
 script = ExtResource("1_0mpse")
-next_level = ExtResource("2_x3g7w")
 entry_dialogue = "house_enter"
 
 [node name="Sprites" type="Node2D" parent="." unique_id=1900571917 groups=["day_cycle"]]

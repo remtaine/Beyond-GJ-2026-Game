@@ -16,5 +16,3 @@ func swap_cycle() -> void:
 	else:
 		$Day.visible = not $Day.visible
 		$Night.visible = not $Night.visible
-		print("day is now ", $Day.visible)
-		print("night is now ", $Night.visible)
