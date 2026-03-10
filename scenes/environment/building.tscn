@@ -1,32 +1,34 @@
 [gd_scene format=3 uid="uid://dh37rgvpnaty0"]
 
-[ext_resource type="Script" uid="uid://77xif6ltk2m3" path="res://scenes/environment/building.gd" id="1_rqqr8"]
-[ext_resource type="PackedScene" uid="uid://8ojv5oj6xwgi" path="res://scenes/levels/level_dressup.tscn" id="2_e5the"]
-[ext_resource type="Texture2D" uid="uid://cne03ykxjsxny" path="res://images/map/exterior_house_day.png" id="3_e5the"]
-[ext_resource type="Texture2D" uid="uid://7glgiqtxnohh" path="res://images/map/exterior_house_night.png" id="4_o0wfr"]
+[ext_resource type="Script" uid="uid://77xif6ltk2m3" path="res://scenes/environment/building.gd" id="1_0mpse"]
+[ext_resource type="PackedScene" uid="uid://8ojv5oj6xwgi" path="res://scenes/levels/level_dressup.tscn" id="2_x3g7w"]
+[ext_resource type="Script" uid="uid://bufhnutu0fcsj" path="res://scenes/environment/day_cycle_sprites.gd" id="3_7gcnc"]
+[ext_resource type="Texture2D" uid="uid://cne03ykxjsxny" path="res://images/map/exterior_house_day.png" id="4_26xop"]
+[ext_resource type="Texture2D" uid="uid://7glgiqtxnohh" path="res://images/map/exterior_house_night.png" id="5_7vxnf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(137.92065, 135.9202)
 
-[node name="House" type="Area2D" unique_id=446300562]
+[node name="Building" type="Area2D" unique_id=446300562]
 scale = Vector2(2.0664063, 1.9570314)
-script = ExtResource("1_rqqr8")
-next_level = ExtResource("2_e5the")
+script = ExtResource("1_0mpse")
+next_level = ExtResource("2_x3g7w")
 entry_dialogue = "house_enter"
 
-[node name="Sprites" type="Node2D" parent="." unique_id=1900571917]
+[node name="Sprites" type="Node2D" parent="." unique_id=1900571917 groups=["day_cycle"]]
 scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_7gcnc")
 
 [node name="Day" type="Sprite2D" parent="Sprites" unique_id=1663011849]
 position = Vector2(1.1124822, 2.3324566)
 scale = Vector2(0.044425327, 0.044425324)
-texture = ExtResource("3_e5the")
+texture = ExtResource("4_26xop")
 
 [node name="Night" type="Sprite2D" parent="Sprites" unique_id=1268325823]
 visible = false
 position = Vector2(1.1124822, 2.3324566)
 scale = Vector2(0.044425327, 0.044425324)
-texture = ExtResource("4_o0wfr")
+texture = ExtResource("5_7vxnf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=838419211]
 position = Vector2(0.7258979, 0.510977)

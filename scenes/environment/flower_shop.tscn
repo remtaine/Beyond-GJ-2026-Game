@@ -1,18 +1,15 @@
 [gd_scene format=3 uid="uid://cqqchrftn6rp"]
 
-[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/house.tscn" id="1_nmfnc"]
-[ext_resource type="Script" uid="uid://bufhnutu0fcsj" path="res://scenes/environment/day_cycle_sprites.gd" id="2_837tv"]
+[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_nmfnc"]
 [ext_resource type="Texture2D" uid="uid://bdhnvaama71fs" path="res://images/map/exterior_flower_shop_day.png" id="2_vvbje"]
 [ext_resource type="Texture2D" uid="uid://bqmvt07djo86l" path="res://images/map/exterior_flower_shop_night.png" id="3_l88ji"]
 
 [node name="FlowerShop" unique_id=446300562 instance=ExtResource("1_nmfnc")]
+next_level = null
 entry_dialogue = "flower_store_enter"
 
-[node name="Sprites" parent="." index="0" unique_id=1900571917 groups=["day_cycle"]]
-script = ExtResource("2_837tv")
-
-[node name="Day" parent="Sprites" index="0" unique_id=1663011849]
+[node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
 texture = ExtResource("2_vvbje")
 
-[node name="Night" parent="Sprites" index="1" unique_id=1268325823]
+[node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
 texture = ExtResource("3_l88ji")

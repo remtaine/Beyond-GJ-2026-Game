@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cvbsavf5kb3pf"]
+
+[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_1tj8u"]
+[ext_resource type="Texture2D" uid="uid://blj6alq5j1cw1" path="res://images/map/exterior_grocery.png" id="2_di2m0"]
+
+[node name="Groceries" unique_id=446300562 instance=ExtResource("1_1tj8u")]
+
+[node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
+texture = ExtResource("2_di2m0")
+
+[node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
+texture = ExtResource("2_di2m0")

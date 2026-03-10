@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bx08krfjtox0t"]
+
+[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_aotos"]
+[ext_resource type="Texture2D" uid="uid://bi6jd6mbfyndf" path="res://images/map/exterior_restaurant_day.png" id="2_dsxug"]
+[ext_resource type="Texture2D" uid="uid://cwgkascvolt7l" path="res://images/map/exterior_restaurant_night.png" id="3_kmg70"]
+
+[node name="Restaurant" unique_id=446300562 instance=ExtResource("1_aotos")]
+
+[node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
+texture = ExtResource("2_dsxug")
+
+[node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
+texture = ExtResource("3_kmg70")
