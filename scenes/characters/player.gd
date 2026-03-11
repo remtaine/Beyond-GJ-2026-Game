@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var sprite_day: AnimatedSprite2D = $Sprites/Day
 @onready var sprite_night: AnimatedSprite2D = $Sprites/Night
 
-const SPEED = 300.0
+const SPEED = 125.0
 const JUMP_VELOCITY = -400.0
 
 var current_house_hovered : Node2D
