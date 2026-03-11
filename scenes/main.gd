@@ -1,5 +1,7 @@
 extends Node
 
+const LEVEL_DRESSUP = preload("res://scenes/levels/level_dressup.tscn")
+const LEVEL_OUTSIDE = preload("res://scenes/levels/level_outside.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +13,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_key_pressed(KEY_R) and Messenger.debug:
+		get_tree().reload_current_scene()
 
-func change_level(next_level) -> void:
-	print("changing level in main to ", next_level)
+func change_level(next_scene) -> void:
+	print("changing level in main to ", Messenger.next_scene_str)
+	#TODO transition cover
+	for child in get_children():
+		if child.name.begins_with("Level"):
+			var new_level = get(next_scene).instantiate()
+			child.add_sibling(new_level)
+			child.queue_free()
+			break
+	#TODO remove transition
