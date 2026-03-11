@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_left",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -97,7 +97,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -126,7 +126,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 4.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0wfyh"]
@@ -140,7 +140,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_left",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -151,7 +151,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -180,7 +180,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -209,7 +209,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 4.0
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=605741468]
