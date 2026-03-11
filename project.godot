@@ -8,22 +8,73 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Beyond-GJ-2026-Game"
 run/main_scene="res://scenes/main.tscn"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Dialogic="*uid://ds2q0uclmolvu"
+Messenger="*uid://ji1tktfpni0r"
 
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
-layout/style_directory={}
+directories/dtl_directory={
+"flower_store_enter": "res://dialogue/flower_store_enter.dtl",
+"house_enter": "res://dialogue/house_enter.dtl"
+}
+layout/style_directory={
+"": "res://resources/dialogic_default_theme.tres",
+"dialogic_default_theme": "res://resources/dialogic_default_theme.tres"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://resources/dialogic_default_theme.tres"]
+layout/default_style="res://resources/dialogic_default_theme.tres"
+variables={
+"next_level": ""
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+choices/hotkey_behaviour=1
 
 [display]
 
@@ -34,6 +85,11 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[global_group]
+
+enterable=""
+day_cycle=""
 
 [gui]
 
@@ -86,5 +142,6 @@ dialogic_default_action={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
