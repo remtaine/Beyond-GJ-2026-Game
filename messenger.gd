@@ -1,5 +1,6 @@
 extends Node
 
+var debug := true
 var next_scene_str : String
 signal change_level(next_level_str)
 
@@ -12,5 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func change_scene() -> void:
-	change_level.emit()
+func change_scene(next_scene := next_scene_str) -> void:
+	next_scene_str = next_scene
+	print("next scene is ", next_scene)
+	change_level.emit(next_scene)
