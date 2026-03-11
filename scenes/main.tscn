@@ -1,71 +1,24 @@
 [gd_scene format=3 uid="uid://clvw2uyphr3ib"]
 
 [ext_resource type="PackedScene" uid="uid://bv8p0ra0i2iin" path="res://scenes/levels/level_outside.tscn" id="1_jyhfs"]
-[ext_resource type="Texture2D" uid="uid://3xaigdvi2xle" path="res://icon.svg" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dogb8ao1rifbo" path="res://scenes/main.gd" id="1_tbgi4"]
-[ext_resource type="Script" uid="uid://c2pe5jh4s4mmd" path="res://scenes/ui/day_night_button.gd" id="3_jyhfs"]
-[ext_resource type="Script" uid="uid://1qa7rlfqwpes" path="res://scenes/ui/phone.gd" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://b37hl6kpxov80" path="res://scenes/ui/ui_layer_outside.tscn" id="3_sugp2"]
 
 [node name="Main" type="Node" unique_id=1759323836]
 script = ExtResource("1_tbgi4")
 
 [node name="LevelOutside" parent="." unique_id=1968536122 instance=ExtResource("1_jyhfs")]
 
-[node name="UILayer" type="CanvasLayer" parent="." unique_id=1299301904]
-
-[node name="DayNightButton" type="Button" parent="UILayer" unique_id=671310313]
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 156.0
-offset_bottom = 156.0
-focus_mode = 0
-icon = ExtResource("1_o5qli")
-script = ExtResource("3_jyhfs")
-
-[node name="DayNightLabel" type="RichTextLabel" parent="UILayer/DayNightButton" unique_id=1966334851]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 141.0
-offset_right = 140.0
-offset_bottom = 180.0
-text = "Day/Night"
-
-[node name="Phone" type="Control" parent="UILayer" unique_id=1414637824]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-script = ExtResource("3_sugp2")
-
-[node name="PhoneLabel" type="RichTextLabel" parent="UILayer/Phone" unique_id=544893839]
-layout_mode = 0
-offset_left = -109.0
-offset_top = 154.0
-offset_right = 28.0
-offset_bottom = 193.0
-text = "Phone"
-horizontal_alignment = 1
-
-[node name="PhoneAppearButton" type="Button" parent="UILayer/Phone" unique_id=871543796]
-layout_mode = 0
-offset_left = -111.0
-offset_top = 12.0
-offset_right = 25.0
-offset_bottom = 148.0
-focus_mode = 0
-icon = ExtResource("1_o5qli")
-
-[node name="PhoneList" type="ColorRect" parent="UILayer/Phone" unique_id=393251287]
+[node name="UILayer" parent="." unique_id=1540580630 instance=ExtResource("3_sugp2")]
 visible = false
-layout_mode = 0
-offset_left = -1291.0
-offset_top = 154.0
-offset_right = -536.0
-offset_bottom = 946.0
-color = Color(0.7336398, 0.6444362, 1.1551381e-06, 1)
 
-[connection signal="pressed" from="UILayer/DayNightButton" to="UILayer/DayNightButton" method="_on_pressed"]
-[connection signal="pressed" from="UILayer/Phone/PhoneAppearButton" to="UILayer/Phone" method="_on_phone_appear_button_pressed"]
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2034679127]
+
+[node name="Transition" type="ColorRect" parent="TransitionLayer" unique_id=70684861]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
