@@ -3,11 +3,11 @@ extends Control
 var phone_visible := false
 var phone_movement := 400
 
-@onready var phone_list: ColorRect = $PhoneList
+@onready var phone_list:= $UILayer/PhoneList
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	phone_list.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
