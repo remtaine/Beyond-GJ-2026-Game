@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bv8p0ra0i2iin"]
 
 [ext_resource type="Script" uid="uid://bufhnutu0fcsj" path="res://scenes/environment/day_cycle_sprites.gd" id="1_6hx8f"]
-[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_qhgnm"]
 [ext_resource type="Texture2D" uid="uid://cs37kwvwq3mq5" path="res://images/map/exterior_map_day_bg.png" id="1_sa21k"]
 [ext_resource type="PackedScene" uid="uid://cqqchrftn6rp" path="res://scenes/environment/flower_shop.tscn" id="1_ycyr0"]
 [ext_resource type="Texture2D" uid="uid://dw25cc3wpqay8" path="res://images/map/exterior_map_night_bg.png" id="2_h0iu1"]
@@ -12,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b7k7ka4dwerp7" path="res://scenes/environment/cafe.tscn" id="6_p6xc1"]
 [ext_resource type="PackedScene" uid="uid://bx08krfjtox0t" path="res://scenes/environment/restaurant.tscn" id="6_w46pw"]
 [ext_resource type="PackedScene" uid="uid://cvbsavf5kb3pf" path="res://scenes/environment/groceries.tscn" id="7_arku5"]
+[ext_resource type="PackedScene" uid="uid://by3bq06o6vtr5" path="res://scenes/environment/house.tscn" id="7_yryca"]
 [ext_resource type="PackedScene" uid="uid://ddlwj4yfegjpk" path="res://scenes/environment/night_market.tscn" id="8_hrheo"]
 [ext_resource type="PackedScene" uid="uid://b37hl6kpxov80" path="res://scenes/ui/ui_layer_outside.tscn" id="14_en1ys"]
 
@@ -76,8 +76,9 @@ position = Vector2(632.99994, 876.99994)
 [node name="Cafe" parent="Environment" unique_id=125649470 instance=ExtResource("6_p6xc1")]
 position = Vector2(1097.9999, 868.99994)
 
-[node name="House" parent="Environment" unique_id=1071866450 groups=["enterable"] instance=ExtResource("1_qhgnm")]
-position = Vector2(1566.0001, 878)
+[node name="House" parent="Environment" unique_id=468861843 instance=ExtResource("7_yryca")]
+position = Vector2(1565, 872)
+scale = Vector2(2.066406, 1.9570313)
 
 [node name="Restaurant" parent="Environment" unique_id=397722449 instance=ExtResource("6_w46pw")]
 position = Vector2(2097.0002, 877)

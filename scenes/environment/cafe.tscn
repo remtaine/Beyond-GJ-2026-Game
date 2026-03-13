@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_1q0bs"]
 [ext_resource type="Texture2D" uid="uid://68on3c4lhqen" path="res://images/map/exterior_cafe.png" id="2_110ve"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q0bs"]
+size = Vector2(38.35162, 68.471085)
+
 [node name="Cafe" unique_id=446300562 instance=ExtResource("1_1q0bs")]
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
@@ -10,3 +13,8 @@ texture = ExtResource("2_110ve")
 
 [node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
 texture = null
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
+position = Vector2(32.120983, 31.680634)
+scale = Vector2(0.99999964, 0.9999996)
+shape = SubResource("RectangleShape2D_1q0bs")

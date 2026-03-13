@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_dicwi"]
 [ext_resource type="Texture2D" uid="uid://bmxfcg6odq0to" path="res://images/map/exterior_night_market.png" id="2_lys3w"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dicwi"]
+size = Vector2(89.28548, 101.17369)
+
 [node name="NightMarket" unique_id=446300562 instance=ExtResource("1_dicwi")]
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
@@ -10,3 +13,8 @@ texture = null
 
 [node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
 texture = ExtResource("2_lys3w")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
+position = Vector2(1.8147446, 16.862272)
+scale = Vector2(0.99999964, 0.9999996)
+shape = SubResource("RectangleShape2D_dicwi")

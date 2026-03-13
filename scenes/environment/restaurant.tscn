@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bi6jd6mbfyndf" path="res://images/map/exterior_restaurant_day.png" id="2_dsxug"]
 [ext_resource type="Texture2D" uid="uid://cwgkascvolt7l" path="res://images/map/exterior_restaurant_night.png" id="3_kmg70"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aotos"]
+size = Vector2(30.608704, 53.14174)
+
 [node name="Restaurant" unique_id=446300562 instance=ExtResource("1_aotos")]
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
@@ -11,3 +14,8 @@ texture = ExtResource("2_dsxug")
 
 [node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
 texture = ExtResource("3_kmg70")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
+position = Vector2(-0.7863894, 39.345306)
+scale = Vector2(0.99999964, 0.9999996)
+shape = SubResource("RectangleShape2D_aotos")

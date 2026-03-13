@@ -3,10 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_vp0q1"]
 [ext_resource type="Texture2D" uid="uid://dbemline4a8ji" path="res://images/map/exterior_bar.png" id="2_twgc1"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp0q1"]
+size = Vector2(50.449924, 66.42717)
+
 [node name="Bar" unique_id=446300562 instance=ExtResource("1_vp0q1")]
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
+visible = false
 texture = null
 
 [node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
+visible = true
 texture = ExtResource("2_twgc1")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
+position = Vector2(2.9802317e-08, 35.257473)
+scale = Vector2(0.99999964, 0.9999994)
+shape = SubResource("RectangleShape2D_vp0q1")

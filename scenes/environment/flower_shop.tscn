@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bdhnvaama71fs" path="res://images/map/exterior_flower_shop_day.png" id="2_vvbje"]
 [ext_resource type="Texture2D" uid="uid://bqmvt07djo86l" path="res://images/map/exterior_flower_shop_night.png" id="3_l88ji"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l88ji"]
+size = Vector2(32.423447, 57.22956)
+
 [node name="FlowerShop" unique_id=446300562 instance=ExtResource("1_nmfnc")]
 entry_dialogue = "flower_store_enter"
 
@@ -12,3 +15,8 @@ texture = ExtResource("2_vvbje")
 
 [node name="Night" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="1" unique_id=1268325823]
 texture = ExtResource("3_l88ji")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
+position = Vector2(20.083172, 39.345306)
+scale = Vector2(0.99999964, 0.9999994)
+shape = SubResource("RectangleShape2D_l88ji")

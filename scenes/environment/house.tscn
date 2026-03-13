@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://by3bq06o6vtr5"]
+
+[ext_resource type="PackedScene" uid="uid://dh37rgvpnaty0" path="res://scenes/environment/building.tscn" id="1_ae0on"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqqr8"]
+size = Vector2(37.262775, 63.872276)
+
+[node name="House" unique_id=446300562 instance=ExtResource("1_ae0on")]
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
+position = Vector2(25.890358, 35.51297)
+scale = Vector2(0.99999964, 0.9999995)
+shape = SubResource("RectangleShape2D_rqqr8")

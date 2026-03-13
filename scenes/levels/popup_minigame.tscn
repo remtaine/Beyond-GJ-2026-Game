@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b216atj6tigx2"]
+
+[ext_resource type="Texture2D" uid="uid://chicqsuklawn0" path="res://images/mini_game/minigameBG.png" id="1_6fp2h"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fthbs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbhbk"]
+size = Vector2(147, 944)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7383t"]
+size = Vector2(147, 1061)
+
+[node name="Minigame" type="CanvasLayer" unique_id=1723626482]
+
+[node name="Popup" type="Popup" parent="." unique_id=1027969790]
+oversampling_override = 1.0
+size = Vector2i(1920, 1080)
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="Popup" unique_id=1785940608]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -440.0
+offset_right = 460.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6fp2h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup/TextureRect" unique_id=1478854863]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 11.0
+offset_right = 295.0
+offset_bottom = 51.0
+text = "Score: 00"
+fit_content = true
+scroll_active = false
+
+[node name="Wall1" type="StaticBody2D" parent="Popup" unique_id=716643269]
+position = Vector2(364, 126)
+physics_material_override = SubResource("PhysicsMaterial_fthbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Popup/Wall1" unique_id=468692465]
+position = Vector2(63.5, 427)
+shape = SubResource("RectangleShape2D_xbhbk")
+
+[node name="Wall2" type="StaticBody2D" parent="Popup" unique_id=895331208]
+position = Vector2(1430, 126)
+physics_material_override = SubResource("PhysicsMaterial_fthbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Popup/Wall2" unique_id=1001038634]
+position = Vector2(63.5, 427)
+shape = SubResource("RectangleShape2D_xbhbk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Popup/Wall2" unique_id=1578999602]
+position = Vector2(-474.5, 922)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_7383t")

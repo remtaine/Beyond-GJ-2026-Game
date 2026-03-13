@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7glgiqtxnohh" path="res://images/map/exterior_house_night.png" id="5_7vxnf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
-size = Vector2(137.92065, 135.9202)
+size = Vector2(89.28548, 101.17369)
 
 [node name="Building" type="Area2D" unique_id=446300562]
 scale = Vector2(2.0664063, 1.9570314)
