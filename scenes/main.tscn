@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://clvw2uyphr3ib"]
 
-[ext_resource type="PackedScene" uid="uid://bv8p0ra0i2iin" path="res://scenes/levels/level_outside.tscn" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://dogb8ao1rifbo" path="res://scenes/main.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dx62c1k3lp3mt" path="res://scenes/menus/main_menu.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b37hl6kpxov80" path="res://scenes/ui/ui_layer_outside.tscn" id="3_sugp2"]
 
 [node name="Main" type="Node" unique_id=1759323836]
 script = ExtResource("1_tbgi4")
 
-[node name="LevelOutside" parent="." unique_id=1968536122 instance=ExtResource("1_jyhfs")]
+[node name="LevelMainMenu" parent="." unique_id=465526690 instance=ExtResource("2_sugp2")]
 
 [node name="UILayer" parent="." unique_id=1540580630 instance=ExtResource("3_sugp2")]
 visible = false
 
 [node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2034679127]
+layer = 99999
 
 [node name="Transition" type="ColorRect" parent="TransitionLayer" unique_id=70684861]
 anchors_preset = 15
