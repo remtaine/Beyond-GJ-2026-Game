@@ -18,8 +18,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_R) and Messenger.debug:
-		get_tree().reload_current_scene()
+	pass
 
 func change_level(next_scene) -> void:
 	print("changing level in main to ", Messenger.next_scene_str)

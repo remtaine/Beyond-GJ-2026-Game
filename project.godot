@@ -45,6 +45,9 @@ directories/dtl_directory={
 "enter_house": "res://dialogue/enter_house.dtl",
 "enter_restaurant": "res://dialogue/enter_restaurant.dtl",
 "enter_restaurant_day_01": "res://dialogue/enter_restaurant_day_01.dtl",
+"enter_restaurant_day_02": "res://dialogue/enter_restaurant_day_02.dtl",
+"enter_restaurant_day_03": "res://dialogue/enter_restaurant_day_03.dtl",
+"enter_restaurant_day_04": "res://dialogue/enter_restaurant_day_04.dtl",
 "intro": "res://dialogue/intro.dtl"
 }
 layout/style_directory={

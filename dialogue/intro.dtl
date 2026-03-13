@@ -19,7 +19,6 @@ gabbie: [i]Eventually, she wipes the tears off her face and turns to me.[/i]
 tala: Tabu? Are you seriously going with that, Gabbie?
 # TODO display characters or a different background
 [signal arg="show_intro_characters"]
-[wait_input]
 set {gabbie_display_name} = "Gabbie"
 set {tala_display_name} = "Tala"
 gabbie: Well, I would love to hear more of your suggestions, Tala. “Labu” isn’t that much better.
