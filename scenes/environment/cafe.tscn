@@ -7,6 +7,7 @@
 size = Vector2(38.35162, 68.471085)
 
 [node name="Cafe" unique_id=446300562 instance=ExtResource("1_1q0bs")]
+entry_dialogue = "enter_cafe"
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
 texture = ExtResource("2_110ve")

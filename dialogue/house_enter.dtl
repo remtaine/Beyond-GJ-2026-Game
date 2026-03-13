@@ -1,4 +1,0 @@
-This is your house. Do you want to enter?
-- Yes
-	do Messenger.change_scene()
-- No

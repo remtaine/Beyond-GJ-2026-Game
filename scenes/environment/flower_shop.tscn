@@ -8,7 +8,7 @@
 size = Vector2(32.423447, 57.22956)
 
 [node name="FlowerShop" unique_id=446300562 instance=ExtResource("1_nmfnc")]
-entry_dialogue = "flower_store_enter"
+entry_dialogue = "enter_flower_store"
 
 [node name="Day" parent="Sprites" parent_id_path=PackedInt32Array(1900571917) index="0" unique_id=1663011849]
 texture = ExtResource("2_vvbje")

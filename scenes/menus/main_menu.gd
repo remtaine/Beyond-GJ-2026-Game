@@ -13,7 +13,8 @@ func _process(delta: float) -> void:
 
 func _on_start_button_pressed() -> void:
 	print("going")
-	Messenger.change_scene("LEVEL_OUTSIDE")
+	#Messenger.change_scene("LEVEL_OUTSIDE")
+	Messenger.change_scene("LEVEL_INTRO")
 
 
 func _on_tutorial_button_pressed() -> void:

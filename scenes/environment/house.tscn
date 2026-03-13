@@ -6,6 +6,7 @@
 size = Vector2(37.262775, 63.872276)
 
 [node name="House" unique_id=446300562 instance=ExtResource("1_ae0on")]
+entry_dialogue = "enter_house"
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=838419211]
 position = Vector2(25.890358, 35.51297)

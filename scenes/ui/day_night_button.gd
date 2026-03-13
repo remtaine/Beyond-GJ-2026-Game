@@ -15,5 +15,10 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	print("change day/night")
+	if Dialogic.VAR.day_night_cycle == "day":
+		Dialogic.VAR.day_night_cycle = "night"
+	elif Dialogic.VAR.day_night_cycle == "night":
+		Dialogic.VAR.day_night_cycle = "day"
+
 	change_day_and_night.emit()
 	get_tree().call_group("day_cycle", "swap_cycle")

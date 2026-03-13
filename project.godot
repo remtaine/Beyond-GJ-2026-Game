@@ -28,11 +28,17 @@ Messenger="*uid://ji1tktfpni0r"
 
 directories/dch_directory={
 "gabbie": "res://dialogue/dialogue_characters/gabbie.dch",
+"staff": "res://dialogue/dialogue_characters/staff.dch",
 "tala": "res://dialogue/dialogue_characters/tala.dch"
 }
 directories/dtl_directory={
-"flower_store_enter": "res://dialogue/flower_store_enter.dtl",
-"house_enter": "res://dialogue/house_enter.dtl",
+"enter_cafe": "res://dialogue/enter_cafe.dtl",
+"enter_cafe_day_01": "res://dialogue/enter_cafe_day_01.dtl",
+"enter_cafe_day_02": "res://dialogue/enter_cafe_day_02.dtl",
+"enter_cafe_day_03": "res://dialogue/enter_cafe_day_03.dtl",
+"enter_cafe_day_04": "res://dialogue/enter_cafe_day_04.dtl",
+"enter_flower_store": "res://dialogue/enter_flower_store.dtl",
+"enter_house": "res://dialogue/enter_house.dtl",
 "intro": "res://dialogue/intro.dtl"
 }
 layout/style_directory={
@@ -43,8 +49,13 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic_default_theme.tres"]
 layout/default_style="res://resources/dialogic_default_theme.tres"
 variables={
+"day_night_cycle": "day",
 "gabbie_display_name": "???",
-"tala_display_name": "Amused Woman"
+"tala_display_name": "Amused Woman",
+"visits": {
+"lunch_coworkers": 0,
+"social_media": 0
+}
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

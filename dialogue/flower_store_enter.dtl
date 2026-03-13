@@ -1,4 +1,0 @@
-Enter the flower shop?
-- Yes
-	do Messenger.change_scene()
-- No

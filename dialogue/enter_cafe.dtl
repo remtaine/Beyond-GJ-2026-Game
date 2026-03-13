@@ -1,0 +1,30 @@
+if {day_night_cycle} == "day":
+	This is the cafe.
+	- Enter
+		set {visits.social_media} += 1.0
+		if {visits.social_media} == 1.0:
+			gabbie: [i]I personally love posting on social media.[/i]
+			gabbie: [i]Decorating my stories and picking the right music for the occasion is just the dopamine boost I need on tough days.[/i]
+			gabbie: [i]My mother tends to shower all my stories with hearts and sweet comments.[/i]
+			gabbie: [i]Tala insisted we use this to our advantage.[/i]
+		elif {visits.social_media} <= 4.0:
+			gabbie: [i]The ambience is lovely today. Might as well take a picture while we’re here.[/i]
+		else:
+			gabbie: I think I've spent enough time here.
+			[end_timeline]
+		if {visits.social_media} == 1.0:
+			jump enter_cafe_day_01/
+		elif {visits.social_media} == 2.0:
+			jump enter_cafe_day_02/
+		elif {visits.social_media} == 3.0:
+			jump enter_cafe_day_03/
+		elif {visits.social_media} == 4.0:
+			jump enter_cafe_day_04/
+		if {visits.social_media} == 1.0:
+			gabbie: [i]Tala and I argue about the song choice for a few minutes, but we eventually post the story online.[/i]
+		else:
+			gabbie: [i]We wrap up our business here, and I take Tala back to her office.[/i]
+	- Leave
+elif {day_night_cycle} == "night":
+	The cafe is closed.
+	- Leave

@@ -1,0 +1,4 @@
+This is the flower shop.
+- Get flowers
+	do Messenger.change_scene()
+- Leave

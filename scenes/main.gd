@@ -2,6 +2,8 @@ extends Node
 
 const LEVEL_DRESSUP = preload("res://scenes/levels/level_dressup.tscn")
 const LEVEL_OUTSIDE = preload("res://scenes/levels/level_outside.tscn")
+const LEVEL_INTRO = preload("res://scenes/levels/level_intro.tscn")
+
 const POPUP_MINIGAME = preload("res://scenes/levels/popup_minigame.tscn")
 
 @onready var transition_cover: ColorRect = $TransitionLayer/Transition
