@@ -27,8 +27,12 @@ Messenger="*uid://ji1tktfpni0r"
 [dialogic]
 
 directories/dch_directory={
+"boss": "res://dialogue/dialogue_characters/boss.dch",
+"dave": "res://dialogue/dialogue_characters/dave.dch",
 "gabbie": "res://dialogue/dialogue_characters/gabbie.dch",
+"miguel": "res://dialogue/dialogue_characters/miguel.dch",
 "staff": "res://dialogue/dialogue_characters/staff.dch",
+"steve": "res://dialogue/dialogue_characters/steve.dch",
 "tala": "res://dialogue/dialogue_characters/tala.dch"
 }
 directories/dtl_directory={
@@ -39,6 +43,8 @@ directories/dtl_directory={
 "enter_cafe_day_04": "res://dialogue/enter_cafe_day_04.dtl",
 "enter_flower_store": "res://dialogue/enter_flower_store.dtl",
 "enter_house": "res://dialogue/enter_house.dtl",
+"enter_restaurant": "res://dialogue/enter_restaurant.dtl",
+"enter_restaurant_day_01": "res://dialogue/enter_restaurant_day_01.dtl",
 "intro": "res://dialogue/intro.dtl"
 }
 layout/style_directory={

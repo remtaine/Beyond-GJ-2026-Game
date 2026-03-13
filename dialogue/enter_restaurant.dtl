@@ -1,0 +1,33 @@
+if {day_night_cycle} == "day":
+	This is the restaurant.
+	- Enter
+		set {visits.lunch_coworkers} += 1.0
+		if {visits.lunch_coworkers} == 1.0:
+			gabbie: [i]None of my coworkers are aware that I’m gay. Luckily, no one has really asked anyway. [/i]
+			gabbie: [i]My HR officer has been breathing down my neck though, “highly encouraging” me to hang out with the other men in my office. Building rapport and whatnot. [/i]
+			gabbie: [i]Our boss himself invited all the boys out with the promise of free food, so here we are.[/i]
+		elif {visits.lunch_coworkers} <= 5.0:
+			gabbie: [i]My co-workers and I head towards the usual restaurant. My boss didn’t really give me much of a choice…[/i]
+		else:
+			gabbie: I think I've spent enough time here.
+			[end_timeline]
+		if {visits.lunch_coworkers} == 1.0:
+			jump enter_restaurant_day_01/
+		elif {visits.lunch_coworkers} == 2.0:
+		elif {visits.lunch_coworkers} == 3.0:
+		elif {visits.lunch_coworkers} == 4.0:
+		elif {visits.lunch_coworkers} == 5.0:
+		if {visits.lunch_coworkers} == 1.0:
+			gabbie: [i]My goodness. Every single word in that conversation sucked the life out of me... [/i]
+			gabbie: [i]I wonder if Tala will let me use the “wife card” once we’re married?[/i]
+			gabbie: [i]“I’m busy” never seems to be a good enough excuse.[/i]
+			[end_timeline]
+		else:
+			gabbie: [i]Thank the stars! It’s finally over. Now to face my backlogs…[/i]
+			[end_timeline]
+	- Leave
+		[end_timeline]
+elif {day_night_cycle} == "night":
+	The restaurant is closed.
+	- Leave
+		[end_timeline]
