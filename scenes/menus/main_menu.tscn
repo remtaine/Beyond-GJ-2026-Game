@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://w3shlimiry56" path="res://scenes/menus/main_menu.gd" id="1_xqga4"]
 
-[node name="MainMenu" type="Node" unique_id=465526690]
+[node name="LevelMainMenu" type="Node" unique_id=465526690]
 script = ExtResource("1_xqga4")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1888618957]
