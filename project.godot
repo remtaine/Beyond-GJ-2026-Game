@@ -26,10 +26,14 @@ Messenger="*uid://ji1tktfpni0r"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"gabbie": "res://dialogue/dialogue_characters/gabbie.dch",
+"tala": "res://dialogue/dialogue_characters/tala.dch"
+}
 directories/dtl_directory={
 "flower_store_enter": "res://dialogue/flower_store_enter.dtl",
-"house_enter": "res://dialogue/house_enter.dtl"
+"house_enter": "res://dialogue/house_enter.dtl",
+"intro": "res://dialogue/intro.dtl"
 }
 layout/style_directory={
 "": "res://resources/dialogic_default_theme.tres",
@@ -39,7 +43,8 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic_default_theme.tres"]
 layout/default_style="res://resources/dialogic_default_theme.tres"
 variables={
-"next_level": ""
+"gabbie_display_name": "???",
+"tala_display_name": "Amused Woman"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
